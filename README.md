@@ -37,3 +37,8 @@ Support polymer  ace editor
     console.log(aceEditor.getValue());
 
 ```
+
+## native ace editor API
+
+----
+http://ajaxorg.github.io/ace/#nav=api
