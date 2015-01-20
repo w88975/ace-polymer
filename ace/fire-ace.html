@@ -66,15 +66,6 @@ polyfill-next-selector { content: ':host #fire-ace-editor-container'; }
             // handle theme changes
             editor.renderer.addEventListener("themeLoaded", this.onThemeLoaded.bind(this));
 
-            // initial attributes
-            editor.setTheme( this.getAttribute("theme") );
-            editor.setFontSize( this.getAttribute("fontsize") );
-            editor.setReadOnly( this.getAttribute("readonly") );
-            var session = editor.getSession();
-            session.setMode( this.getAttribute("mode") );
-            session.setUseSoftTabs( this.getAttribute("softtabs") );
-
-
             this.editor = editor;
             // Observe input textNode changes
             // Could be buggy as editor was also added to Light DOM;
