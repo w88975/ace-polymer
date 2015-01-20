@@ -1,0 +1,17 @@
+{
+  "name": "ace-polymer",
+  "version": "0.0.0",
+  "authors": [
+    "KamiSama <1457434343@qq.com>"
+  ],
+  "description": "ace for polymer",
+  "keywords": [
+    "ace",
+    "polymer"
+  ],
+  "license": "MIT",
+  "homepage": "http://github.com/w88975",
+  "dependencies": {
+    "polymer": "Polymer/polymer#~0.5.2"
+  }
+}

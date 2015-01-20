@@ -1,0 +1,38 @@
+<html>
+<head>
+    <title>ace editor for polymer demo page</title>
+    <link rel="import" href="../bower_components/polymer/polymer.html">
+    <link rel="import" href="../ace/fire-ace.html">
+</head>
+<body>
+    <polymer-element
+        name="ace-element"
+        >
+    <template>
+        <fire-ace id="fireAce" name="fire-ace">
+            var express=require('express');
+            var cwd = process.cwd();
+            var app=express();
+            var serveStatic = require('serve-static');
+            app.use('/ace', serveStatic('ace'));
+            app.use('/test', serveStatic('test'));
+            app.get('/', function(req, res){
+                res.sendFile( cwd + '/test/demo.html' );
+            });
+            app.listen(3000);
+            console.log('listen to port: http://127.0.0.1:3000');
+        </fire-ace>
+    </template>
+
+    </polymer-element>
+    <ace-element></ace-element>
+</body>
+<script>
+Polymer('ace-element',{
+    ready: function () {
+        var aceEditor = this.$.fireAce.editor;
+        console.log(aceEditor.getValue());
+    }
+});
+</script>
+</html>

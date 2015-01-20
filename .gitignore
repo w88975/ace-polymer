@@ -1,0 +1,6 @@
+# mac-osx files
+.DS_store
+
+polymer/
+node_modules/
+bower_components/
